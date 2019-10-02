@@ -1,0 +1,30 @@
+﻿@page "/label"
+
+@inject IStringLocalizer localizer;
+
+<h1>Blazored Label Sample</h1>
+
+<hr class="mb-5" />
+
+<h3>@localizer["Person_Title"]</h3>
+
+<EditForm Model="@Model">
+    <p>
+        <LabelText For="@(() => Model.First)" />
+        <InputText @bind-Value="@Model.First" />
+    </p>
+
+    <p>
+        <LabelText For="@(() => Model.Last)" />
+        <InputText @bind-Value="@Model.Last" />
+    </p>
+
+    <p>
+        <LabelText For="@(() => Model.EmailAddress)" />
+        <InputText @bind-Value="@Model.EmailAddress" />
+    </p>
+</EditForm>
+
+@code {
+    Person Model { get; set; } = new Person();
+}
