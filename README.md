@@ -22,9 +22,10 @@ Start by add the following using statement to your root `_Imports.razor`.
 @using Blazored.FormExtensions
 ```
 
-You can then use it as follows within a `EditForm` component.
+## Usage - LabelText
+You can use this within a `EditForm` component:
 
-```html
+``` html
 <EditForm Model="@Model">
     <p>
         <LabelText For="@(() => Model.First)" />
@@ -47,14 +48,15 @@ You can then use it as follows within a `EditForm` component.
 }
 ```
 
+## Configuration
 Also make sure to setup and configure the `IStringLocalizer` correctly like:
 ``` diff
 public void ConfigureServices(IServiceCollection services)
 {
 +   services.AddRazorPages().AddViewLocalization(options => options.ResourcesPath = "Resources");
-+	services.AddLocalization(options => options.ResourcesPath = "Resources");
++   services.AddLocalization(options => options.ResourcesPath = "Resources");
 +   services.AddSingleton(typeof(IStringLocalizer), typeof(StringLocalizer<SharedLocalization.SharedResources>));
 
-	// more ...
+    // more ...
 }
 ```
