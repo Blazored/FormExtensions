@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Blazored.FormExtensions\Blazored.FormExtensions.csproj" />
+    <ProjectReference Include="..\Microsoft.AspNetCore.Components.Testing\Microsoft.AspNetCore.Components.Testing.csproj" />
   </ItemGroup>
 
 </Project>

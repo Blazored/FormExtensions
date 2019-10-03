@@ -7,13 +7,13 @@ using Xunit;
 
 namespace Blazored.FormExtensions.Tests
 {
-    public class LabelTextTests
+    public class LabelTextUnitTests
     {
         private readonly Person _model = new Person();
 
         private readonly LabelTextMock _sut;
 
-        public LabelTextTests()
+        public LabelTextUnitTests()
         {
             _sut = new LabelTextMock();
         }

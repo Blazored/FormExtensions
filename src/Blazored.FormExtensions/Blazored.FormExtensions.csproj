@@ -5,15 +5,15 @@
     <RazorLangVersion>3.0</RazorLangVersion>
     <RootNamespace>Blazored.FormExtensions</RootNamespace>
 
-    <PackageId>Blazored.Label</PackageId>
+    <PackageId>Blazored.FormExtensions</PackageId>
     <Version>1.0.0</Version>
     <Authors>Stef Heyenrath</Authors>
-    <Description>A library for using FluentValidation with Blazor</Description>
-    <Copyright>Copyright 2019 (c) Chris Sainty. All rights reserved.</Copyright>
+    <Description>A library with several extensions to Microsoft.AspNetCore.Components.Forms</Description>
+    <Copyright>Copyright 2019 (c) Chris Sainty &amp; Stef Heyenrath. All rights reserved.</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/blazored/Label</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/blazored/FormExtensions</PackageProjectUrl>
     <PackageIconUrl>https://avatars1.githubusercontent.com/u/39194025</PackageIconUrl>
-    <RepositoryUrl>https://github.com/blazored/Label</RepositoryUrl>
+    <RepositoryUrl>https://github.com/blazored/FormExtensions</RepositoryUrl>
     <PackageTags>Blazor Blazored Components Form Forms Extensions FormExtensions Label LabelText</PackageTags>
     <Company />
   </PropertyGroup>

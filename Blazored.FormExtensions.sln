@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazored.FormExtensions", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedLocalization", "samples\Shared\SharedLocalization\SharedLocalization.csproj", "{20ABF2B7-F3A0-4E7E-816E-73AECAC53E03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazored.FormExtensions.Tests", "tests\Blazored.FormExtensions.Tests\Blazored.FormExtensions.Tests.csproj", "{FDEB2B5E-627C-4BBE-B618-BF9D4D7A67D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazored.FormExtensions.Tests", "tests\Blazored.FormExtensions.Tests\Blazored.FormExtensions.Tests.csproj", "{FDEB2B5E-627C-4BBE-B618-BF9D4D7A67D2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Components.Testing", "tests\Microsoft.AspNetCore.Components.Testing\Microsoft.AspNetCore.Components.Testing.csproj", "{F59BB538-28AB-4005-8182-E5E726751662}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +97,18 @@ Global
 		{FDEB2B5E-627C-4BBE-B618-BF9D4D7A67D2}.Release|x64.Build.0 = Release|Any CPU
 		{FDEB2B5E-627C-4BBE-B618-BF9D4D7A67D2}.Release|x86.ActiveCfg = Release|Any CPU
 		{FDEB2B5E-627C-4BBE-B618-BF9D4D7A67D2}.Release|x86.Build.0 = Release|Any CPU
+		{F59BB538-28AB-4005-8182-E5E726751662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F59BB538-28AB-4005-8182-E5E726751662}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F59BB538-28AB-4005-8182-E5E726751662}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F59BB538-28AB-4005-8182-E5E726751662}.Debug|x64.Build.0 = Debug|Any CPU
+		{F59BB538-28AB-4005-8182-E5E726751662}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F59BB538-28AB-4005-8182-E5E726751662}.Debug|x86.Build.0 = Debug|Any CPU
+		{F59BB538-28AB-4005-8182-E5E726751662}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F59BB538-28AB-4005-8182-E5E726751662}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F59BB538-28AB-4005-8182-E5E726751662}.Release|x64.ActiveCfg = Release|Any CPU
+		{F59BB538-28AB-4005-8182-E5E726751662}.Release|x64.Build.0 = Release|Any CPU
+		{F59BB538-28AB-4005-8182-E5E726751662}.Release|x86.ActiveCfg = Release|Any CPU
+		{F59BB538-28AB-4005-8182-E5E726751662}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -105,6 +119,7 @@ Global
 		{61B82772-3497-4A95-A344-BC5F734C1D47} = {5E996CC7-BC91-4EA5-96ED-B16BC55A3BDE}
 		{20ABF2B7-F3A0-4E7E-816E-73AECAC53E03} = {D5C6DCA9-C2BD-4117-BCCC-19E36E8406AB}
 		{FDEB2B5E-627C-4BBE-B618-BF9D4D7A67D2} = {F7AC1C73-C80D-484A-B720-C03E0244DC0B}
+		{F59BB538-28AB-4005-8182-E5E726751662} = {F7AC1C73-C80D-484A-B720-C03E0244DC0B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {42B22D99-6E59-4B30-88AD-B9CC07E0DA49}
