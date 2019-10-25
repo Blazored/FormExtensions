@@ -3,9 +3,11 @@ A library with some Form Extensions for Blazor:
 
 - LabelText
 
+## Project
+
 [![Build Status](https://dev.azure.com/blazored/FormExtensions/_apis/build/status/Blazored.FormExtensions?branchName=master)](https://dev.azure.com/blazored/FormExtensions/_build/latest?definitionId=15&branchName=master)
 
-![Nuget](https://img.shields.io/nuget/v/blazored.formextensions.svg)
+[![NuGet Badge Blazored.FormExtensions](https://buildstats.info/nuget/Blazored.FormExtensions)](https://www.nuget.org/packages/Blazored.FormExtensions)
 
 ### Installing
 
