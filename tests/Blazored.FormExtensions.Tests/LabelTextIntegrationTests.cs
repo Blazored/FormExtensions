@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq.Expressions;
 using Blazored.FormExtensions.Tests.Models;
-using Microsoft.AspNetCore.Components.Testing;
+using Bunit;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Localization;
 using Moq;
 using Xunit;
 
 namespace Blazored.FormExtensions.Tests
 {
-    public class LabelTextIntegrationTests
+    public sealed class LabelTextIntegrationTests : ComponentTestFixture
     {
-        private readonly TestHost _host = new TestHost();
         private readonly Mock<IStringLocalizer> _stringLocalizerMock;
         private readonly Person _model = new Person();
 
@@ -20,7 +19,7 @@ namespace Blazored.FormExtensions.Tests
             _stringLocalizerMock = new Mock<IStringLocalizer>();
             _stringLocalizerMock.Setup(l => l[It.IsAny<string>()]).Returns(new LocalizedString("name", "my_value"));
 
-            _host.AddService(_stringLocalizerMock.Object);
+            Services.AddSingleton(_stringLocalizerMock.Object);
         }
 
         [Fact]
@@ -28,10 +27,10 @@ namespace Blazored.FormExtensions.Tests
         {
             // Arrange
             Expression<Func<string>> For = () => _model.First;
-            var parameters = new Dictionary<string, object> { { "For", For }, { "class", "c" } };
+            var parameters = new[] { ComponentParameter.CreateParameter("For", For), ComponentParameter.CreateParameter("class", "c") };
 
             // Act
-            var component = _host.AddComponent<LabelText<string>>(parameters);
+            var component = RenderComponent<LabelText<string>>(parameters);
 
             // Assert
             Assert.Equal("<label class=\"c\">my_value</label>", component.Find("label").OuterHtml);
