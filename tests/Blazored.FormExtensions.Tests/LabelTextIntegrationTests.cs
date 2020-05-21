@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq.Expressions;
-using Blazored.FormExtensions.Tests.Models;
+﻿using Blazored.FormExtensions.Tests.Models;
 using Bunit;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Localization;
@@ -9,7 +7,7 @@ using Xunit;
 
 namespace Blazored.FormExtensions.Tests
 {
-    public sealed class LabelTextIntegrationTests : ComponentTestFixture
+    public sealed class LabelTextIntegrationTests : TestContext
     {
         private readonly Mock<IStringLocalizer> _stringLocalizerMock;
         private readonly Person _model = new Person();
@@ -25,12 +23,13 @@ namespace Blazored.FormExtensions.Tests
         [Fact]
         public void Renders_Label_ForPropertyWithDisplayAttributeAndAdditionalAttributes()
         {
-            // Arrange
-            Expression<Func<string>> For = () => _model.First;
-            var parameters = new[] { ComponentParameter.CreateParameter("For", For), ComponentParameter.CreateParameter("class", "c") };
-
             // Act
-            var component = RenderComponent<LabelText<string>>(parameters);
+            var component = RenderComponent<LabelText<string>>(builder =>
+            {
+                builder
+                    .Add(c => c.For, () => _model.First)
+                    .AddUnmatched("class", "c");
+            });
 
             // Assert
             Assert.Equal("<label class=\"c\">my_value</label>", component.Find("label").OuterHtml);
