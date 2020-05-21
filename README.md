@@ -51,14 +51,24 @@ You can use this within a `EditForm` component:
 ```
 
 ## Configuration
-Also make sure to setup and configure the `IStringLocalizer` correctly like:
+
+### ServiceSide Blazor
+Make sure to setup and configure the `IStringLocalizer` correctly in the `Startup.cs` like:
 ``` diff
 public void ConfigureServices(IServiceCollection services)
 {
 +   services.AddRazorPages().AddViewLocalization(options => options.ResourcesPath = "Resources");
 +   services.AddLocalization(options => options.ResourcesPath = "Resources");
 +   services.AddSingleton(typeof(IStringLocalizer), typeof(StringLocalizer<SharedLocalization.SharedResources>));
+}
+```
 
-    // more ...
+### ClientSide (WebAssembly) Blazor
+Make sure to setup and configure the `IStringLocalizer` correctly in the `Program.cs` like:
+``` diff
+public void ConfigureServices(IServiceCollection services)
+{
++   builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
++   builder.Services.AddSingleton(typeof(IStringLocalizer), typeof(StringLocalizer<SharedLocalization.SharedResources>));
 }
 ```
